@@ -1,3 +1,4 @@
+
 let f = fun y -> y+3;;
 let g = fun x -> x*x;;
 let h = f << g;; // f(g)  dvs. (x*x) + 3
@@ -10,7 +11,7 @@ let waterWeight = weight 1000.0;;
 let methanolWeight = weight 786.5;;
 
 //higher-order
-let weight density sidelength = density * sidelength**3.0;;
+let weight2 density sidelength = density * sidelength**3.0;;
 
 // closure is a value that is a function
 // a closure is a triple : (x, exp, env) 
@@ -33,7 +34,7 @@ let circleArea r = pi * r * r;;
 (* ---- EXERCISES ---- *)
 // 2.1  Declare a function f: int -> bool such that f(n) = true exactly when n is divisible by 2 or 3 but not by 5
 //      Write down the expected values of f(24), f(27), f(29) and f(30)
-let f n = ((n%2=0) || (n%3=0)) && (not(n%5=0));;
+let f2 n = ((n%2=0) || (n%3=0)) && (not(n%5=0));;
 (*
     f(24) = true
     f(27) = true
@@ -59,4 +60,4 @@ let isItChar(s : string, i, c) = s.[i] = c;;
 
 //2.4  Declare the F# function occFromIth: string * int * char -> int where
 //      it returns the number of occur. of char c in positions j >= i in string s
-let occFromIth(s : string, i, c) =
+let occFromIth(s : string, i, c) = 1;;
