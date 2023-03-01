@@ -8,6 +8,8 @@
   <ItemGroup>
     <Compile Include="MultiSet.fsi" />
     <Compile Include="MultiSet.fs" />
+    <Compile Include="Dict.fsi" />
+    <Compile Include="Dict.fs" />
   </ItemGroup>
 
 </Project>
