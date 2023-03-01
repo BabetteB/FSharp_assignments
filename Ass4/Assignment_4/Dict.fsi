@@ -2,21 +2,30 @@
 // Collection of strings (lists, or sets for instance)
 type Dict
 
-val empty : unit -> Dict
+val emptyDS : unit -> Dict
 
-val insert : string -> Dict -> Dict
+val insertDS : string -> Dict -> Dict
 
-val lookup : string -> Dict -> bool
+val lookupDS : string -> Dict -> bool
 
 // Trie
 type Trie
 
-val empty : unit -> Trie
+val emptyT : unit -> Trie
 
-val insert : string -> Trie -> Trie
+val insertT : string -> Trie -> Trie
 
-val lookup : string -> Trie -> bool
+val lookupT : string -> Trie -> bool
 
-val step : char -> Trie -> (bool * Trie)
+val stepT : char -> Trie -> (bool * Trie) option
 
 // Gaddag
+type Gaddag
+
+val empty   : unit -> Gaddag
+val insert  : string -> Gaddag -> Gaddag
+
+val step    : char -> Gaddag -> (bool * Gaddag) option
+val reverse : Gaddag -> (bool * Gaddag) option
+
+val lookup : string -> Gaddag -> bool
